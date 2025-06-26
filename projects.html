@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>المشاريع - إبراهيم مبروك</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <style>
+      body {
+        font-family: 'Cairo', sans-serif;
+        background-color: #181e23;
+        color: white;
+      }
+      .profile-img {
+        transition: transform 0.3s ease;
+      }
+      .profile-img:hover {
+        transform: scale(1.05);
+      }
+      #tsparticles {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- الخلفية المتحركة -->
+    <div id="tsparticles"></div>
+
+    <!-- Navbar -->
+    <nav class="bg-gray-800 py-4 shadow-md fixed w-full top-0 z-50">
+      <div class="container mx-auto px-6 flex justify-between items-center">
+        <h1 class="text-lg font-bold">Ibrahim.dev</h1>
+        <div class="flex gap-6">
+          <a href="index.html" class="hover:text-blue-400 transition">الرئيسية</a>
+          <a href="projects.html" class="text-blue-400 font-semibold">مشاريعي</a>
+          <a href="contact.html" class="hover:text-blue-400 transition">تواصل</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/201558905021" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 rounded-full shadow-lg p-4 flex items-center justify-center transition" style="width:60px;height:60px;">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" width="32" height="32"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6L0 24l6.26-1.64A12.07 12.07 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zM12 22a10.1 10.1 0 0 1-5.19-1.43l-.37-.22-3.72.98.99-3.62-.24-.37A10.1 10.1 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.27-7.25c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.21-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.19 2.1 3.21 5.09 4.37.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.07-.11-.26-.18-.55-.33z"/></svg>
+    </a>
+
+    <!-- Projects Section -->
+    <section class="py-12" data-aos="fade-up" data-aos-delay="200">
+      <div class="container mx-auto px-6">
+        <h2 class="text-2xl font-bold text-center mb-8">أبرز مشاريعي</h2>
+        <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4"></div>
+      </div>
+    </section>
+
+    <div class="pb-28"></div>
+
+    <footer class="bg-gray-900 bg-opacity-95 text-white pt-12 pb-4 mt-16 border-t border-gray-800">
+      <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-right">
+        <div>
+          <h3 class="text-lg font-bold mb-2 text-blue-400">عن إبراهيم</h3>
+          <p class="text-sm text-gray-300 leading-loose">إبراهيم مبروك، مطور واجهات أمامية شغوف ببناء تجارب رقمية عصرية واحترافية. متخصص في تطوير مواقع ويب تفاعلية وسريعة باستخدام أحدث التقنيات.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2 text-blue-400">روابط السوشيال</h3>
+          <div class="flex justify-center md:justify-start gap-3 mt-2">
+            <a href="https://wa.me/201558905021" target="_blank" class="bg-green-500 hover:bg-green-600 text-white rounded-full p-2 transition shadow-md" title="WhatsApp"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.52 3.48A12.07 12.07 0 0 0 12 0C5.37 0 0 5.37 0 12a11.93 11.93 0 0 0 1.64 6L0 24l6.26-1.64A12.07 12.07 0 0 0 12 24c6.63 0 12-5.37 12-12a11.93 11.93 0 0 0-3.48-8.52zM12 22a10.1 10.1 0 0 1-5.19-1.43l-.37-.22-3.72.98.99-3.62-.24-.37A10.1 10.1 0 0 1 2 12c0-5.52 4.48-10 10-10s10 4.48 10 10-4.48 10-10 10zm5.27-7.25c-.29-.15-1.7-.84-1.96-.94-.26-.1-.45-.15-.64.15-.19.29-.74.94-.91 1.13-.17.19-.34.21-.63.07-.29-.15-1.22-.45-2.33-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.34.43-.51.15-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.15-.64-1.54-.88-2.11-.23-.56-.47-.48-.64-.49-.17-.01-.36-.01-.56-.01-.19 0-.51.07-.78.36-.27.29-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.19 2.1 3.21 5.09 4.37.71.31 1.26.5 1.69.64.71.23 1.36.2 1.87.12.57-.09 1.7-.69 1.94-1.36.24-.67.24-1.25.17-1.36-.07-.11-.26-.18-.55-.33z"/></svg></a>
+            <a href="mailto:ie4951611@gmail.com" target="_blank" class="bg-red-500 hover:bg-red-600 text-white rounded-full p-2 transition shadow-md" title="Email"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 2v.01L12 13 4 6.01V6h16zM4 20V8.99l8 6.99 8-6.99V20H4z"/></svg></a>
+            <a href="https://www.linkedin.com/in/ibrahim..." target="_blank" class="bg-blue-700 hover:bg-blue-800 text-white rounded-full p-2 transition shadow-md" title="LinkedIn"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.28c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 11.28h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62z"/></svg></a>
+            <a href="https://www.instagram.com/eng.ibahimmabrouk" target="_blank" class="bg-gradient-to-tr from-pink-500 via-red-500 to-yellow-500 hover:from-pink-600 hover:via-red-600 hover:to-yellow-600 text-white rounded-full p-2 transition shadow-md" title="Instagram"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.584.012 4.85.07 1.17.056 1.97.24 2.43.41.59.22 1.01.48 1.45.92.44.44.7.86.92 1.45.17.46.354 1.26.41 2.43.058 1.266.07 1.65.07 4.85s-.012 3.584-.07 4.85c-.056 1.17-.24 1.97-.41 2.43-.22.59-.48 1.01-.92 1.45-.44.44-.86.7-1.45.92-.46.17-1.26.354-2.43.41-1.266.058-1.65.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.056-1.97-.24-2.43-.41-.59-.22-1.01-.48-1.45-.92-.44-.44-.7-.86-.92-1.45-.17-.46-.354-1.26-.41-2.43C2.212 15.784 2.2 15.4 2.2 12s.012-3.584.07-4.85c.056-1.17.24-1.97.41-2.43.22-.59.48-1.01.92-1.45.44-.44.86-.7 1.45-.92.46-.17 1.26-.354 2.43-.41C8.416 2.212 8.8 2.2 12 2.2zm0-2.2C8.736 0 8.332.012 7.052.07c-1.28.058-2.16.24-2.91.51-.8.29-1.48.68-2.16 1.36-.68.68-1.07 1.36-1.36 2.16-.27.75-.452 1.63-.51 2.91C.012 8.332 0 8.736 0 12c0 3.264.012 3.668.07 4.948.058 1.28.24 2.16.51 2.91.29.8.68 1.48 1.36 2.16.68.68 1.36 1.07 2.16 1.36.75.27 1.63.452 2.91.51C8.332 23.988 8.736 24 12 24c3.264 0 3.668-.012 4.948-.07 1.28-.058 2.16-.24 2.91-.51.8-.29 1.48-.68 2.16-1.36.68-.68 1.07-1.36 1.36-2.16.27-.75.452-1.63.51-2.91.058-1.28.07-1.684.07-4.948 0-3.264-.012-3.668-.07-4.948-.058-1.28-.24-2.16-.51-2.91-.29-.8-.68-1.48-1.36-2.16-.68-.68-1.36-1.07-2.16-1.36-.75-.27-1.63-.452-2.91-.51C15.668.012 15.264 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a3.999 3.999 0 1 1 0-7.998 3.999 3.999 0 0 1 0 7.998zm7.844-10.406a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg></a>
+            <a href="https://www.tiktok.com/@ibrahmmabrouk" target="_blank" class="bg-black hover:bg-gray-800 text-white rounded-full p-2 transition shadow-md" title="TikTok"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.004 2c2.21 0 4.004 1.794 4.004 4.004v7.992c0 2.21-1.794 4.004-4.004 4.004s-4.004-1.794-4.004-4.004V6.004C8 3.794 9.794 2 12.004 2zm0 2C10.897 4 10 4.897 10 6.004v7.992c0 1.107.897 2.004 2.004 2.004s2.004-.897 2.004-2.004V6.004C14.008 4.897 13.111 4 12.004 4zm7.996 2.004c0-1.104-.896-2-2-2s-2 .896-2 2 .896 2 2 2 2-.896 2-2-.896-2-2-2zm-2 4c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-12-4c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm2 4c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 8c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm-12 0c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2z"/></svg></a>
+            <a href="https://www.youtube.com/@IbrahimEldeeb-il7xi" target="_blank" class="bg-red-600 hover:bg-red-700 text-white rounded-full p-2 transition shadow-md" title="YouTube"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold mb-2 text-blue-400">تواصل معي</h3>
+          <p class="text-sm text-gray-300">ibrahim@example.com</p>
+          <p class="text-sm text-gray-300 mt-1">واتساب: 201558905021+</p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-gray-800 pt-4 text-center text-xs text-gray-400">
+        جميع الحقوق محفوظة © إبراهيم مبروك 2025
+      </div>
+    </footer>
+
+    <script>
+      AOS.init();
+
+      fetch("https://script.google.com/macros/s/AKfycbyLKS6nB71H-0JYushPNvvEVfYO0ji_RsFqAx3CcoqV7fJyXuDlEv9d0y1c6ufU0aO79Q/exec?action=getProjects")
+        .then(res => res.json())
+        .then(data => {
+          const container = document.getElementById("projects-container");
+          container.innerHTML = "";
+
+          data.forEach(project => {
+            container.innerHTML += `
+              <div class="project-card rounded-xl shadow p-4 bg-white dark:bg-gray-800">
+                <img src="${project.imageUrl}" alt="${project.name}" class="w-full h-48 object-cover rounded-lg mb-4" />
+                <h3 class="text-xl font-semibold mb-2">${project.name}</h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-2">${project.description}</p>
+                <a href="${project.link}" target="_blank" class="text-blue-600 dark:text-blue-400 hover:underline">عرض المشروع →</a>
+              </div>
+            `;
+          });
+        })
+        .catch(error => {
+          console.error("Error loading projects:", error);
+        });
+    </script>
+    
+    <!-- إعداد tsParticles -->
+    <script>
+        particlesJS('tsparticles', {
+            particles: {
+                number: {
+                    value: 80,
+                    density: {
+                        enable: true,
+                        value_area: 800
+                    }
+                },
+                color: {
+                    value: "#3b82f6"
+                },
+                shape: {
+                    type: "circle"
+                },
+                opacity: {
+                    value: 0.5,
+                    random: false
+                },
+                size: {
+                    value: 3,
+                    random: true
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#3b82f6",
+                    opacity: 0.4,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: false,
+                        mode: "repulse"
+                    },
+                    onclick: {
+                        enable: false,
+                        mode: "push"
+                    },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
+  </body>
+</html> 

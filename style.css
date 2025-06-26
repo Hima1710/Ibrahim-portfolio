@@ -1,0 +1,166 @@
+/* Custom styles for Ibrahim Portfolio */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Profile Image Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.8);
+  }
+}
+
+@keyframes borderGlow {
+  0%, 100% {
+    border-color: #3b82f6;
+  }
+  50% {
+    border-color: #60a5fa;
+  }
+}
+
+/* Apply animations to profile image */
+#aboutImage {
+  animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite, borderGlow 2s ease-in-out infinite;
+}
+
+#aboutImage:hover {
+  animation: none;
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 0 50px rgba(59, 130, 246, 0.9);
+  border-color: #60a5fa;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Hover effects */
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+.profile-img {
+  transition: transform 0.3s, box-shadow 0.3s, filter 0.3s, border-color 0.3s;
+}
+.profile-img:hover {
+  transform: scale(1.08) rotate(-1deg);
+  box-shadow: 0 0 32px 8px #3b82f6, 0 8px 32px 0 rgba(59,130,246,0.25);
+  filter: brightness(1.15) drop-shadow(0 0 24px #60a5fa);
+  border-color: #60a5fa;
+}
+
+/* Projects Section Styles */
+#projects-container .bg-white {
+  background-color: #374151 !important;
+  color: white;
+}
+
+#projects-container .text-gray-600 {
+  color: #d1d5db !important;
+}
+
+#projects-container .text-blue-600 {
+  color: #60a5fa !important;
+}
+
+#projects-container .text-blue-600:hover {
+  color: #93c5fd !important;
+}
+
+/* Project card hover effects */
+#projects-container .rounded-xl {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#projects-container .rounded-xl:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+}
+
+/* Floating animation for skill cards */
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px) scale(1.07) rotate(-2deg); }
+}
+
+.skill-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.skill-card:hover {
+  animation: floatCard 1.2s ease-in-out;
+  box-shadow: 0 8px 32px 0 #3b82f6aa, 0 1.5px 8px 0 #60a5fa55;
+}
+
+/* Glow effect for skill icon */
+.skill-icon {
+  box-shadow: 0 0 0 0 #3b82f6;
+  transition: box-shadow 0.4s;
+}
+.skill-card:hover .skill-icon {
+  box-shadow: 0 0 24px 6px #60a5fa99, 0 0 8px 2px #3b82f6cc;
+}
+
+@keyframes blueGlow {
+  0% { box-shadow: 0 0 0 0 #3b82f6cc, 0 1.5px 8px 0 #60a5fa55; }
+  40% { box-shadow: 0 0 32px 8px #3b82f6cc, 0 1.5px 8px 0 #60a5fa55; }
+  60% { box-shadow: 0 0 40px 16px #60a5fa99, 0 1.5px 8px 0 #3b82f6cc; }
+  100% { box-shadow: 0 0 0 0 #3b82f6cc, 0 1.5px 8px 0 #60a5fa55; }
+}
+
+.project-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.project-card:hover {
+  animation: blueGlow 1.1s;
+  transform: scale(1.04) translateY(-6px) rotate(-1deg);
+  z-index: 2;
+} 
